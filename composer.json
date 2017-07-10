@@ -1,0 +1,23 @@
+{
+    "name": "diab/redis-client",
+    "description": "basic php redis client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diab",
+            "email": "mohammed.magdy.diab@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "RedisClient\\" : "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "squizlabs/php_codesniffer":"*",
+        "phpunit/phpunit":"*",
+        "cheprasov/php-extra-mocks":"*"
+    }
+}
