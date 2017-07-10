@@ -41,7 +41,7 @@ class RedisClient
 
     public function set($key, $value)
     {
-        $command = "SET {$key} {$value} \r\n ";
+        $command = "SET {$key} {$value} \r\n";
         $this->connection->write($command);
         $result = $this->parser->parse();
         if ($result == 'OK') {

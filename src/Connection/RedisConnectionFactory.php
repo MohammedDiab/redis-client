@@ -2,6 +2,8 @@
 
 namespace RedisClient\Connection;
 
+use RedisClient\Adapters\RedisStreamAdapter;
+
 class RedisConnectionFactory
 {
 

@@ -1,7 +1,9 @@
 <?php
 
-namespace RedisClient\Connection;
+namespace RedisClient\Adapters;
 
+use RedisClient\Connection\AbstractConnection;
+use RedisClient\Connection\IConnection;
 use RedisClient\Exception\ConnectionFailedException;
 
 class RedisStreamAdapter extends AbstractConnection implements IConnection
@@ -28,8 +30,7 @@ class RedisStreamAdapter extends AbstractConnection implements IConnection
         }
 
         if (isset($this->timeout)) {
-            $this->timeout = $this->timeout * 1000000 ;
-            stream_set_timeout($this->resource, 0, $this->timeout);
+            stream_set_timeout($this->resource, $this->timeout, 0);
         }
     }
 
